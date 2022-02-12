@@ -45,3 +45,4 @@ This was made completely for educational purposes.
 Please do not use it for anything else.
 Like stealing other people's stuff.
 Anything but that.
+Also, I am not responsible for any damage done to your computer or anyone else's.
