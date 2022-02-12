@@ -24,7 +24,7 @@ After ratting the target, the mod forcibly closes the client, then deletes the e
 
 Go to the **.minecraft** directory and find the **version** folder. Open the **1.8.9 OptiFine** directory, and edit the .json file. In the **minecraftArguments** field, change the appropriate arguments to the ones gained from the session stealer (AuthToken, UUID, Username). Starting Minecraft should then log you into their account.
 
-# Transferring stolen items
+# Transferring items
 
 Basically just pretend to be really good at auction sniping.
 
