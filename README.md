@@ -20,7 +20,7 @@ I needed a cool name for this, so I picked probably the scariest thing related t
 
 After ratting the target, the mod forcibly closes the client, then deletes the entirety of the .minecraft folder (including itself), as well as the launcher. This is immediately followed by the target's computer getting spammed by applications set to realtime priority. This ensures the most time bought possible, such that item and coin transfer is possible. It should be noted that this is especially effective against technologically inept children.
 
-# Stealing a session
+# Session Stealing
 
 Go to the **.minecraft** directory and find the **version** folder. Open the **1.8.9 OptiFine** directory, and edit the .json file. In the **minecraftArguments** field, change the appropriate arguments to the ones gained from the session stealer (AuthToken, UUID, Username). Starting Minecraft should then log you into their account.
 
