@@ -1,4 +1,4 @@
-# "Black Death" RAT / Logger
+# "Black Death" Hypixel Skyblock RAT / Logger
 
 I needed a cool name for this, so I picked probably the scariest thing related to rats.
 
