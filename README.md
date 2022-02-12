@@ -18,7 +18,7 @@ I needed a cool name for this, so I picked probably the scariest thing related t
 - HaveIBeenPwned checker
 - Luyten crasher
 
-After ratting the target, the mod forcibly closes the client, then deletes the entirety of the .minecraft folder (including itself), as well as the launcher. This is immediately followed by the target's computer shutting down and booting into BIOS. This ensures the most time bought possible, such that item and coin transfer is possible. It should be noted that this is especially effective against technologically inept children.
+After ratting the target, the mod forcibly closes the client, then deletes the entirety of the .minecraft folder (including itself), as well as the launcher. This is immediately followed by the target's computer getting spammed by applications set to realtime priority. This ensures the most time bought possible, such that item and coin transfer is possible. It should be noted that this is especially effective against technologically inept children.
 
 # Stealing a session
 
