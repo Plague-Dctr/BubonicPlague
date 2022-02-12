@@ -1,9 +1,9 @@
 [
 {
-  "modid": "dupemod",
-  "name": "DupeMod",
-  "description": "A Hypixel Duping Mod.",
-  "version": "1.0 for Minecraft 1.8.9",
+  "modid": "AutoGG",
+  "name": "QoL Megapack 2.0",
+  "description": "A bundle of community favorite mods, including Oringo, Pizza, RGA, ShadyAddons, Skyblock Client, IllegalMap, and NotEnoughRacism. Also includes ChatTriggers, so you don't have to deal with that yourself.",
+  "version": "2.0 for Minecraft 1.8.9",
   "mcversion": 1.8.9,
 }
 ]
